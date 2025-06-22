@@ -164,3 +164,78 @@ Commit and push the changes to your GitHub repository.
 
 This combination of technologies ensures a responsive, secure, and scalable Airbnb-like experience for users and hosts.
 
+
+## 🔐 API Security
+
+Security is a critical component of this project to protect sensitive user data, ensure secure transactions, and prevent malicious activity. The following measures are implemented to secure the API:
+
+---
+
+### ✅ Authentication
+
+**Implementation:**  
+- Uses **JWT (JSON Web Tokens)** for stateless authentication
+- Tokens are issued upon successful login and required for accessing protected routes
+
+**Why it matters:**  
+Authentication ensures that only registered and verified users can access their own data, preventing unauthorized access to accounts and private resources.
+
+---
+
+### ✅ Authorization
+
+**Implementation:**  
+- Role-based access control (RBAC) to restrict actions based on user roles (guest, host, admin)
+- Middleware checks ensure users can only perform actions they are authorized for (e.g., only hosts can create/edit properties)
+
+**Why it matters:**  
+Authorization protects system integrity by preventing users from performing actions outside their permissions, such as deleting others' listings or accessing admin data.
+
+---
+
+### ✅ Rate Limiting
+
+**Implementation:**  
+- Rate limiting is applied to sensitive endpoints like login, registration, and booking using middleware (e.g., `django-ratelimit` or `express-rate-limit`)
+
+**Why it matters:**  
+Helps defend against brute-force attacks, credential stuffing, and API abuse by limiting the number of requests a user or IP can make in a given timeframe.
+
+---
+
+### ✅ Input Validation & Sanitization
+
+**Implementation:**  
+- All incoming data is validated and sanitized using serializers or schema validators
+- Protection against common web vulnerabilities like XSS, SQL Injection, and CSRF
+
+**Why it matters:**  
+Input validation prevents attackers from injecting malicious payloads, corrupting the database, or gaining unauthorized access to the application.
+
+---
+
+### ✅ HTTPS Enforcement
+
+**Implementation:**  
+- All API communication is enforced over HTTPS in production
+- SSL/TLS certificates are used to encrypt data in transit
+
+**Why it matters:**  
+Encrypts sensitive data such as login credentials, personal info, and payment details, protecting against eavesdropping and man-in-the-middle attacks.
+
+---
+
+### ✅ Secure Payment Integration
+
+**Implementation:**  
+- Payments are processed using trusted third-party providers like Stripe or PayPal
+- Card details are never stored in the local database
+
+**Why it matters:**  
+Ensures that financial data is handled securely and compliantly, minimizing liability and protecting users from fraud or theft.
+
+---
+
+These measures collectively ensure the privacy, integrity, and availability of the system and its users.
+
+
