@@ -239,3 +239,12 @@ Ensures that financial data is handled securely and compliantly, minimizing liab
 These measures collectively ensure the privacy, integrity, and availability of the system and its users.
 
 
+create a section called “CI/CD Pipeline”.
+
+Briefly explain what CI/CD pipelines are and why they are important for the project.
+
+Mention the tools that could be used for this (e.g., GitHub Actions, Docker, etc.).
+
+Commit and push the changes to your GitHub repository.
+
+
