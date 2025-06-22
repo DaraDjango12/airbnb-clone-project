@@ -153,5 +153,14 @@ Tracks transactions for completed bookings.
 This schema supports flexible, scalable data management for hosting, searching, and booking
 
 
+section called “Feature Breakdown”.
+
+List the main features (e.g., user management, property management, booking system, etc.) as outlined in the project overview.
+
+Provide a 2-3 sentence description of each feature, explaining how it contributes to the project.
+
+Commit and push the changes to your GitHub repository.
+
+
 This combination of technologies ensures a responsive, secure, and scalable Airbnb-like experience for users and hosts.
 
